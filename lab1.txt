@@ -1,0 +1,85 @@
+1.1	
+
+1. Object is a type of parameter which has its own attribute and methods
+2. Class is a group of object with the same properties and methods
+ex:
+    class Person{
+        public string name;
+        public int age;
+        public int getAge()
+        {
+            return age;
+        }
+    }
+3. Instantiation of object (creating an object): is the method to create a new object of a class with its own attribute and method from the class
+    Person John = new Person;
+    John.name = "John";
+    John.age = 25;
+4. Visibility (public / private / protected)
++, public: attribute and method with public declaration in a class means that the attribute can be accessed (get or set) inside or outside of the class
++, private:  attribute and method with public declaration in a class means that the attribute can be accessed (get or set) inside of the class but can't be accessed from outside of the class
++, protected: attribute and method with public declaration in a class means that the attribute can be accessed (get or set) inside of the class and the inheritted class but can't be accessed from outside of the class
+5. Member datas / methods: is the properties or method which is declared in the class and is set for the object from the class with different value
+6. Inheritance: Inheritance class would inherit or use properties and method from the super class. If a method or attribute is changed or different from the super class it would be declared as super. 
+The object from Inheritance class would also be object from the super class.
+class Teacher extends Person{
+        constructor(super)
+        public string class_name;
+    }
+7. Interface
+8. Polymorphism: One object can be acted in many forms or belong to many class. For example an object created from Teacher class can also act as Person class and also a Staff class.
+9. Overriding: is a way to modify the method in an Inheritance class which has been declared form the original class. When this method is used by an object in the inheritance class it will run as the method has be re-writen in the inheritance one.
+example
+class Employee
+{
+    private string name;
+    private int salary;
+    public void setSalary(){
+        this.salary = 3000;
+    }
+}
+class Manager extends Employee
+{
+    private string name;
+    private int salary;
+    @Override
+    public void setSalary(){
+        this.salary = 5000;
+    }
+}
+
+10. Abstract class: is a class that has virtual function inside the class. New object can not be create with this class. This class is used for inheritance. New object can only be created from the inheritance class.
+example:
+abstract class Bike{  
+  abstract void run();  
+}  
+class Honda4 extends Bike{  
+    void run() {
+        System.out.println("running safely..");
+    }
+ 
+    public static void main(String args[]) {  
+        Bike obj = new Honda4();  
+        obj.run();  
+    }  
+} 
+
+
+1.3
+
+1.The programming can be use for Android app development: C++, C#, Java, Kotlin, HTML5+CSS+Javascript, Python, Lua
+2.Android Package Kit (APK for short) is the file format used by the Android operating system to distribute and install mobile applications. Like a Windows (PC) system that uses an .exe file to install software, Android will use the APK file.
+3.The Android operating system is a multi-user Linux system in which each app is a different user. By default, the system assigns each app a unique Linux user ID
+4.Activities : The Activity class is the most important component of the Android application, the way it operates constitutes the basis of the application programming model. Android launches a regular application by activating an Activity that corresponds to its specific life cycle during operation.
+Services : Service is one of the four components of an Android application that can perform time-consuming tasks without a user interface (UI). From Activity, you can launch a Service in Android and then turn off the application to switch to another application where the Service continues to work without being killed.
+Broadcast receivers : The Broadcast Receiver is one of the four major components in Android, with the purpose of listening to events, the state of the system emitted via the Intent so that programmers can handle system events on the side. in his application.
+Content providers : Content provider component is used for saving data to device 
+file system. Data can be for example SQLite database
+5.Manifest file contains information about  application. It defines all application components (files). It also defines needed user permissions, Android API level, hardware requirements and libraries
+6.Resources are needed for avoiding putting everything into application source codes. Application can contain multiple resources. User interfaces are defined in XML files then user interface can be modified without changing source code (java). If application needs to support multiple languages, translations for each language can be defined in XML files.
+
+
+4. Android UI
+The first thing with the User interface in the xml file is to create a layout for mainactivity with linear layout, button , text editor and text view.
+In Mainactivity we create a string that contains list of countries' name, then we create a array adapter to push the string into the array, finally we set the array to list in the layout with setAdapter function.
+
